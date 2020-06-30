@@ -6,7 +6,7 @@ let coin = {
 
     toString: function () {
 
-        if (this.state = 0) {
+        if (this.state === 0) {
             return 'Heads'
         }
         else {
@@ -16,7 +16,7 @@ let coin = {
 
     toHTML: function () {
         let image = document.createElement('img');
-        if (this.state = 0) {
+        if (this.state === 0) {
             image.src = "https://clipground.com/images/copper-clipart-13.jpg"
             image.style.width = '300px'
             image.style.height = '300px'
@@ -37,7 +37,6 @@ function display20Flips() {
         displayFlips.append(coin.toString())
         document.body.append(displayFlips)
     }
-    return display20Flips();
     console.log('Over it')
 };
 
@@ -46,6 +45,8 @@ function display20Images() {
         coin.flip()
         document.body.append(coin.toHTML())
     }
-    return display20Images();
     console.log('Past it')
 }
+
+display20Flips()
+display20Images()
